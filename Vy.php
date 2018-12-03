@@ -15,7 +15,39 @@
     <img src="baseline_arrow_back_ios_white_18dp.png" id="tillbaka"/>
 </a>
 
-<div class="vy">
+<div class="menu">
+    <h3>Meny</h3>
+
+    <div class="menuu">
+        <h4>Item 1</h4>
+    </div>
+    <div class="menuu">
+        <h4>Item 2</h4>
+    </div>   
+    <div class="menuu">
+        <h4>Item 3</h4>
+    </div>
+
+</div>
+
+<div class="dvy">
+    <h2>Dag</h2>
+</div>
+
+<div class="mvy">
+    <h2>Månad</h2>
+</div>
+
+<div class="yvy">
+    <h2>2018</h2>
+
+<a href="index.php">
+    <img src="baseline_arrow_back_ios_white_18dp.png" id="-år"/>
+</a>
+
+<a href="index.php">
+    <img src="baseline_arrow_back_ios_white_18dp.png" id="plusår"/>
+</a>
 
 </div>
 
