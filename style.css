@@ -157,7 +157,6 @@ footer{
     right: 0;
     top: 0;
     background-color: white;
-    display: ;
     border-left-style: solid;
     border-left-width: 0.05vw;
     border-left-color: #666;
@@ -224,9 +223,33 @@ h4{
     height: 100vh;
     background-color: #fce4ec;
 }
-.menuu{
-    width: 100%;
-    padding: 3vh 0vw;
-    border-style: solid;
-    border-width: 0.1vh;
+.body1{
+    background-color: #41393cd3;
+}
+
+#kalender
+{
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+table
+{
+    width:100%;
+
+}
+
+th{
+    width:14.3%;
+    font-weight:bold;
+    text-align:left;
+    background-color:rgb(220,220,220);
+}
+
+
+td
+{
+    height:30px;
+    background-color:rgb(255,255,255);
 }

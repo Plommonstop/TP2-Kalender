@@ -18,7 +18,7 @@
 </form>
 
 <form action ="index.php">
-<input type="submit" value="Registrera" class="reg">
+<input type="submit" value="Registera" class="reg">
 </form>
 
 <footer>
