@@ -14,14 +14,14 @@
 <p class="titlel1">Registrera</p>
 
 <a href="index.php">
-    <img src="baseline_arrow_back_ios_white_18dp.png" id="tillbaka"/>
+    <img src="back.png" id="tillbaka"/>
 </a>
 
 <div class="login">
 <h5> WAH </h5>
 <br/><br/><br/>
 
-<form  method="POST" action ="Vy.php">
+<form  method="" action ="">
 <input type="text" name="username" id="email" placeholder="username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-mail'" autocomplete="off"><br/><br/><br/><br/><br/>
 <input type="text" name="password" id="lösen" placeholder="password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Lösenord'" autocomplete="off">
 
