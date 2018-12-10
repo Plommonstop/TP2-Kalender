@@ -17,7 +17,7 @@
 <input type="submit" value="Logga In" class="loggain">
 </form>
 
-<form action ="index.php">
+<form action ="reg.php">
 <input type="submit" value="Registera" class="reg">
 </form>
 
