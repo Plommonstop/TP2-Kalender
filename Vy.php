@@ -9,7 +9,7 @@
                 "username"=>$username,
                 "password"=>$password,
             ]);
-            var_dump($response);
+            
             $token = json_decode($response,true);
             $_SESSION["token"] = $token["token"];
             $account = json_decode($response,true);
