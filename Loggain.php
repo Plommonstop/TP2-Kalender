@@ -22,8 +22,8 @@
 <br/><br/><br/>
 
 <form  method="POST" action ="Vy.php">
-<input type="text" name="username" id="email" placeholder="username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-mail'" autocomplete="off"><br/><br/><br/><br/><br/>
-<input type="text" name="password" id="lösen" placeholder="password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Lösenord'" autocomplete="off">
+<input type="text" name="username" id="email" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'" autocomplete="off"><br/><br/><br/><br/><br/>
+<input type="text" name="password" id="lösen" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'" autocomplete="off">
 
 <input type="submit" value="Logga In" class="loggain2">
 <input type="reset" value="Rensa" class="rensa">
@@ -33,7 +33,6 @@
     <p>Har du inte ett konto?</p>
 </div>
 
-    <hr>
 <footer>
   <p>WAH Calendar</p>
 </footer>
