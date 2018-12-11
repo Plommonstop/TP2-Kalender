@@ -62,16 +62,22 @@ function populateCalendar(year,month)
 }
 
 
-function changeVy(year)
+function changeView(year)
 {
-    alert(year);
+    document.getElementById("varv").innerHTML = (year);
+}
+
+function changeVy(month)
+{
+var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+document.getElementById("moon").innerHTML = months[(month)];
 }
 
 function createLists()
 {
     var select = document.createElement("select");
     select.setAttribute("id","year");
-    select.setAttribute("onchange","changeVy(this.value);");
+    select.setAttribute("onchange","changeView(this.value);");
 
         for(i=2010; i< 2050;i++)
         {
@@ -82,7 +88,24 @@ function createLists()
         }
 
         document.getElementById("years").appendChild(select);
+
+        var select = document.createElement("select");
+        select.setAttribute("id","month");
+        select.setAttribute("onchange","changeVy(this.value);");
+    
+            for(i=0; i< 12;i++)
+            {
+                var option = document.createElement("option");
+                option.setAttribute("value",i);
+                option.innerHTML=i;
+                select.appendChild(option);
+            }
+    
+            document.getElementById("month").appendChild(select);
+
 }
+
+
 
 
 function correctWeekDays(day)
