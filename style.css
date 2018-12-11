@@ -163,9 +163,24 @@ footer{
     background-color: #41393cd3;
 }
 
-#kalender
+
+#omslag
 {
     width:90%;
+    margin-left:auto;
+    margin-right:auto; 
+}
+
+.lista
+{
+    width:120px;
+    float:left;
+    margin:2px;
+}
+
+#kalender
+{
+    width:100%;
     margin-left:auto;
     margin-right:auto;
 }

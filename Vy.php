@@ -1,4 +1,4 @@
-<!DOCTYPE html>'
+<!DOCTYPE html>
 <?php 
             require_once ("mycurl.php");
             if(isset($_POST["username"]) && isset($_POST["password"])){
@@ -28,12 +28,16 @@
 
 <body class="body1" onload="createTable();createLists();">
 
+<div id="omslag">
+
             <div id="kalender">
             </div>
             <div id="years">
             </div>
+            <div id="month">
+            </div>
 
-
+</div>
 
 
 <footer>
