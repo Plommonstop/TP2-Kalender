@@ -38,7 +38,10 @@
             </div>
 
 </div>
-
+<div id="logout ">
+<p>Welcome <?php echo $_SESSION['account']; ?>,
+ <a href="logout.php">logout</a></p>
+</div>
 
 <footer>
   <p>WAH Calendar</p>
