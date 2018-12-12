@@ -79,7 +79,7 @@ function populateCalendar(year,month)
 
 function displayDatum(datum)
 {
-    alert(datum);
+    
 }
 
 
@@ -165,4 +165,5 @@ function correctWeekDays(day)
 
             return days[day];
 }
+
 
