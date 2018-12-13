@@ -15,6 +15,33 @@
             $account = json_decode($response,true);
             $_SESSION["account"] = $account["accountID"];
     } ?>
+
+    <?php 
+            require_once ("mycurl.php");
+            if(isset($_POST["name"]) && isset($_POST["startTime"]) && isset($_POST["endTime"])){
+            $username = $_POST["name"];
+            $password = $_POST["description"];
+            $username = $_POST["location"];
+            $password = $_POST["startTime"];
+            $password = $_POST["endTime"];
+
+            /*
+            $response = myCurl::execute_curl("http://10.130.216.144/~theprovider/generate-token.php",
+            [
+                "username"=>$username,
+                "password"=>$password,
+            ]);
+            var_dump($response);
+            $token = json_decode($response,true);
+            $_SESSION["token"] = $token["token"];
+            $account = json_decode($response,true);
+            $_SESSION["account"] = $account["accountID"];*/
+    } ?>
+
+
+
+
+
 <html>
 <head>
     <meta charset="utf-8"/>
