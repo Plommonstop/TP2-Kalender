@@ -161,6 +161,7 @@ footer{
 }
 .body1{
     background-color: #41393cd3;
+    overflow-x: hidden;
 }
 
 
@@ -201,4 +202,80 @@ td
 {
     height:30px;
     background-color:rgb(255,255,255);
+}
+.addActivity{
+    position: absolute;
+    right: 7.5vw;
+    bottom: 15vh;
+    width: 2.5vw;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.createActivity{
+    width: 30vw;
+    height: 100vh;
+    background-color: #fce4ec;
+    position: absolute;
+    top: 0;
+    transform: translateX(100vw);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);;
+    transition: 0.4s;
+    text-align: center;
+}
+.show-createActivity{
+    transform: translateX(70vw);
+}
+.move-addActivity{
+    transform: translateX(-25vw);
+}
+.hide-createActivity{
+    cursor: pointer;
+    transform: rotate(180deg);
+    position: absolute;
+    right: 1vw;
+    top: 2vh;
+}
+h4{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: lighter;
+    padding-bottom: 5vh;
+    border-bottom-style: solid;
+    border-bottom-width: 0.1vh;
+    margin-bottom: 10vh;
+    border-bottom-color: rgba(0, 0, 0, 0.666)
+}
+input[type=datetime-local]{
+width: 20vw;
+height: 5vh;
+font-size: 1.5vw;
+background-color: #fce4ec;
+border-style: none;
+border-bottom-style: solid;
+border-bottom-color: black;
+border-bottom-width: 0.2vh;
+}
+::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+::-webkit-calendar-picker-indicator {
+    opacity: 1;
+}
+.Skapa{
+    position: absolute;
+    left: 4vw;
+    bottom: 12vh;
+    width: 8vw;
+    font-size: 1.5vw;
+    padding: 0.6vw 0vw;
+    text-align: left;
+}
+.rensa2{
+    position: absolute;
+    right: 4vw;
+    bottom: 12vh;
+    width: 8vw;
+    font-size: 1.5vw;
+    padding: 0.6vw 0vw;
+    text-align: right;
 }
