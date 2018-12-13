@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php 
+            session_start();
             require_once ("mycurl.php");
             if(isset($_POST["username"]) && isset($_POST["password"])){
             $username = $_POST["username"];
@@ -14,6 +15,7 @@
             $_SESSION["token"] = $token["token"];
             $account = json_decode($response,true);
             $_SESSION["account"] = $account["accountID"];
+            
     } ?>
 <html>
 <head>
@@ -40,8 +42,8 @@
 </div>
 </br>
 <div id="logout ">
-<p>Welcome <?php echo $_SESSION['account']; ?>,
- <a href="logout.php">logout</a></p>
+<p>Welcome <?php echo $_SESSION['account']; ?>,</br> Din token är <?php echo $_SESSION['token'];?></br> 
+ <button type="button"><a href="logout.php">logout</button></a></p>
 </div>
 
 <footer>
