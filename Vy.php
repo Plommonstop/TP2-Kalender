@@ -53,11 +53,11 @@
 
 <form  method="POST" action ="Vy.php">
 
-<input type="text" name="activityName" id="activityName" placeholder="Namn på aktivitet" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Namn på aktivitet'" autocomplete="off"><br/><br/><br/><br/>
-<input type="text" name="activityDesc" id="activityDesc" placeholder="Beskrivning" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Beskrivning'" autocomplete="off"><br/><br/><br/><br/>
+<input type="text" name="name" id="activityName" placeholder="Namn på aktivitet" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Namn på aktivitet'" autocomplete="off"><br/><br/><br/><br/>
+<input type="text" name="description" id="activityDesc" placeholder="Beskrivning" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Beskrivning'" autocomplete="off"><br/><br/><br/><br/>
 <input type="text" name="location" id="location" placeholder="Plats" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Plats'" autocomplete="off"><br/><br/><br/><br/><p>Start-tid</p>
-<input type="datetime-local" name="starttime" id="stime" placeholder="Start-tid" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Start-tid'" autocomplete="off"><br/><br/><br/><br/><p>slut-tid</p>
-<input type="datetime-local" name="endtime" id="etime" placeholder="Slut-tid" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Slut-tid'" autocomplete="off"><br/>
+<input type="datetime-local" name="startTime" id="stime" placeholder="Start-tid" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Start-tid'" autocomplete="off"><br/><br/><br/><br/><p>slut-tid</p>
+<input type="datetime-local" name="endTime" id="etime" placeholder="Slut-tid" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Slut-tid'" autocomplete="off"><br/>
 
 
 <input type="submit" value="Skapa" class="Skapa">
