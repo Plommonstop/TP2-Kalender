@@ -40,7 +40,10 @@
 
 </div>
 
+<div class="addActivities">
+<p class="aktivtext">Lägg till aktivitet</p>
 <img src="add2.png" class="addActivity">
+</div>
 
 <div class="createActivity">
 
@@ -52,8 +55,8 @@
 
 <input type="text" name="activityName" id="activityName" placeholder="Namn på aktivitet" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Namn på aktivitet'" autocomplete="off"><br/><br/><br/><br/>
 <input type="text" name="activityDesc" id="activityDesc" placeholder="Beskrivning" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Beskrivning'" autocomplete="off"><br/><br/><br/><br/>
-<input type="text" name="location" id="location" placeholder="Plats" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Plats'" autocomplete="off"><br/><br/><br/><br/>
-<input type="datetime-local" name="starttime" id="stime" placeholder="Start-tid" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Start-tid'" autocomplete="off"><br/><br/><br/><br/>
+<input type="text" name="location" id="location" placeholder="Plats" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Plats'" autocomplete="off"><br/><br/><br/><br/><p>Start-tid</p>
+<input type="datetime-local" name="starttime" id="stime" placeholder="Start-tid" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Start-tid'" autocomplete="off"><br/><br/><br/><br/><p>slut-tid</p>
 <input type="datetime-local" name="endtime" id="etime" placeholder="Slut-tid" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Slut-tid'" autocomplete="off"><br/>
 
 
@@ -63,7 +66,7 @@
 </div>
 
 <script>
-$(".addActivity").click(function(){
+$(".addActivities").click(function(){
     $(".createActivity").addClass("show-createActivity");
 });
 $(".hide-createActivity").click(function(){

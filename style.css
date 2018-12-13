@@ -204,12 +204,9 @@ td
     background-color:rgb(255,255,255);
 }
 .addActivity{
-    position: absolute;
-    right: 7.5vw;
-    bottom: 15vh;
+    float: right;
     width: 2.5vw;
     cursor: pointer;
-    transition: 0.5s;
 }
 .createActivity{
     width: 30vw;
@@ -219,14 +216,11 @@ td
     top: 0;
     transform: translateX(100vw);
     box-shadow: 0 8px 16px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);;
-    transition: 0.4s;
+    transition: 0.4s ease-in-out;
     text-align: center;
 }
 .show-createActivity{
     transform: translateX(70vw);
-}
-.move-addActivity{
-    transform: translateX(-25vw);
 }
 .hide-createActivity{
     cursor: pointer;
@@ -240,6 +234,7 @@ h4{
     font-size: 2.5rem;
     font-weight: lighter;
     padding-bottom: 5vh;
+    margin-top: 5vh;
     border-bottom-style: solid;
     border-bottom-width: 0.1vh;
     margin-bottom: 10vh;
@@ -262,20 +257,37 @@ border-bottom-width: 0.2vh;
     opacity: 1;
 }
 .Skapa{
-    position: absolute;
-    left: 4vw;
-    bottom: 12vh;
     width: 8vw;
     font-size: 1.5vw;
     padding: 0.6vw 0vw;
     text-align: left;
 }
 .rensa2{
-    position: absolute;
-    right: 4vw;
-    bottom: 12vh;
     width: 8vw;
     font-size: 1.5vw;
     padding: 0.6vw 0vw;
     text-align: right;
+}
+.createActivity p{
+    margin: 0;
+    margin-left: 5vw;
+    text-align: left;
+    font-size: 1.1vw;
+}
+.aktivtext{
+    text-align: left;
+    float: left;
+    color: white;
+    bottom: 14vh;
+    right: 10.5vw;
+    font-size: 1.2vw;
+    cursor: pointer;
+    margin: 0;
+    padding:0.5vw; 
+}
+.addActivities{
+    position: absolute;
+    right: 10vw;
+    bottom: 15vh;
+    height: 2.5vw;
 }
