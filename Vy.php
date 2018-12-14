@@ -10,7 +10,7 @@
                 "username"=>$username,
                 "password"=>$password,
             ]);
-            var_dump($response);
+            
             $token = json_decode($response,true);
             $_SESSION["token"] = $token["token"];
             $account = json_decode($response,true);
@@ -98,6 +98,10 @@ $(".hide-createActivity").click(function(){
 </script>
 
 
+<div id="logout ">
+<p>Welcome <?php echo $_SESSION['account']; ?>,
+ <a href="logout.php">logout</a></p>
+</div>
 
 <footer>
   <p>WAH Calendar</p>

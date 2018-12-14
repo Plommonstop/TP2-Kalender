@@ -131,7 +131,7 @@ function createLists()
         select.setAttribute("id","selected_month");
         select.setAttribute("onchange","changeVyMonth(this.value);");
         select.setAttribute("class","lista");
-        var m = "Januari,Feruari,Mars,April,Maj,Juni,Juli,Augusti,September,Oktober,November,December".split(",");
+        var m = "Januari,Februari,Mars,April,Maj,Juni,Juli,Augusti,September,Oktober,November,December".split(",");
 
         for(i=0; i< m.length;i++)
         {
