@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php 
+            session_start();
             require_once ("mycurl.php");
             if(isset($_POST["username"]) && isset($_POST["password"])){
             $username = $_POST["username"];
@@ -14,33 +15,28 @@
             $_SESSION["token"] = $token["token"];
             $account = json_decode($response,true);
             $_SESSION["account"] = $account["accountID"];
-    } ?>
+    }
 
-    <?php 
             require_once ("mycurl.php");
             if(isset($_POST["name"]) && isset($_POST["startTime"]) && isset($_POST["endTime"])){
-            $username = $_POST["name"];
-            $password = $_POST["description"];
-            $username = $_POST["location"];
-            $password = $_POST["startTime"];
-            $password = $_POST["endTime"];
+            $name = $_POST["name"];
+            $description = $_POST["description"];
+            $location = $_POST["location"];
+            $startTime = $_POST["startTime"];
+            $endTime = $_POST["endTime"];
 
-            /*
-            $response = myCurl::execute_curl("http://10.130.216.144/~theprovider/generate-token.php",
+            
+            $response = myCurl::execute_curl("http://10.130.216.144/~theprovider/create-activity.php",
             [
-                "username"=>$username,
-                "password"=>$password,
+                "token"=>$_SESSION["token"],
+                "accountID"=>$_SESSION["account"],
+                "name"=>$name,
+                "description"=>$description,
+                "location"=>$location,
+                "startTime"=>$startTime,
+                "endTime"=>$endTime,
             ]);
-            var_dump($response);
-            $token = json_decode($response,true);
-            $_SESSION["token"] = $token["token"];
-            $account = json_decode($response,true);
-            $_SESSION["account"] = $account["accountID"];*/
     } ?>
-
-
-
-
 
 <html>
 <head>
