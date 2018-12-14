@@ -4,7 +4,7 @@ session_start();
 unset($_SESSION['account']);
 session_destroy();
 
-header("Location: Loggain.php");
+header("Location: index.php");
 exit;
 ?>
 <html>
