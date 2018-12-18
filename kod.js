@@ -176,9 +176,9 @@ function displayDatum(datum)
     var date = d.getDate();
     var datum = year+"-"+month+"-"+date; //Kan hända att man får lov att ändra på datumformatet här, för att passa till MySQL
 
-    var data = "date"+datum;
+    var data = "date="+datum;
 
-    sendData("container","day.php",data,displayActivity);
+    sendData("aktivitet","getactivities.php",data,displayActivity);
    // alert(datum);
 
 }
@@ -188,7 +188,31 @@ function displayDatum(datum)
 
 function displayActivity(id,response)
 {
-    alert(resonse.responseText);
+   
+    var jsonObj = JSON.parse(response.responseText);
+
+   var content="";
+
+    for(i=0;i<jsonObj.activities.length;i++)
+
+    {
+        
+
+                                 var postid = jsonObj.activities[i].activityID;
+
+                                 var name = jsonObj.activities[i].name;
+
+                                 var description = jsonObj.activities[i].description;
+                                 var start = jsonObj.activities[i].starttime;
+                                 var slut = jsonObj.activities[i].endtime;
+
+                                
+                                 content+=start+"-"+slut+"\nbeskrivning: " + description+"\n namn:"+name;
+                                
+
+    }
+    
+    document.getElementById(id).value = content;
 }
 
 
