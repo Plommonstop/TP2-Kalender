@@ -178,7 +178,7 @@ function displayDatum(datum)
 
     var data = "date"+datum;
 
-    sendData("container","day.php",data,displayActivity);
+    sendData("container","getactivites.php",data,displayActivity);
    // alert(datum);
 
 }
