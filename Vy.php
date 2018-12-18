@@ -16,7 +16,8 @@
             $account = json_decode($response,true);
             $_SESSION["account"] = $account["accountID"];
             
-    } ?>
+    } 
+    ?>
 <html>
 <head>
     <meta charset="utf-8"/>
@@ -25,6 +26,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Varela+Round" rel="stylesheet">
+    <script src="ajaxlib.js"></script>
     <script src="kod.js"></script>
 </head>
 
@@ -38,6 +40,10 @@
             </div>
             <div id="month">
             </div>
+            
+</div>
+<div id="container">
+<textarea id="aktivitet" rows="4">Tillfällig container för text från servern rörande aktivitet</textarea>
 
 </div>
 </br>
@@ -45,7 +51,6 @@
 <p>Welcome <?php echo $_SESSION['account']; ?>,</br> Din token är <?php echo $_SESSION['token'];?></br> 
  <button type="button"><a href="logout.php">logout</button></a></p>
 </div>
-
 <footer>
   <p>WAH Calendar</p>
 </footer>

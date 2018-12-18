@@ -1,0 +1,19 @@
+{
+    "status" : true,
+    "message" : "Dagen hämtad",
+
+    "activities" : [
+        {
+            "id" : ,
+            "name" : "",
+            "plats" : "",
+            "beskrivning" : "",
+            "upprepning" : "",
+            "starttid" : "",
+            "sluttid" : ""
+        },
+        {
+            "..." : "..."
+        }
+    ]
+}

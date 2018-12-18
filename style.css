@@ -183,6 +183,15 @@ footer{
     width:100%;
     margin-left:auto;
     margin-right:auto;
+
+}
+
+#container
+{
+    width:90%;
+    clear:both;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 table

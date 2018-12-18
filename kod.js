@@ -41,6 +41,8 @@ function clear()
     for(i=0;i<celler.length;i++)
     {
         celler[i].innerHTML="";
+        celler[i].removeAttribute("datum");
+        celler[i].removeAttribute("onmousedown");
     }
 }
 
@@ -77,10 +79,7 @@ function populateCalendar(year,month)
 }
 
 
-function displayDatum(datum)
-{
-    
-}
+
 
 
 function changeVy(year)
@@ -164,6 +163,32 @@ function correctWeekDays(day)
     days[6] = 5;
 
             return days[day];
+}
+
+/* Ajaxanrop*/
+
+function displayDatum(datum)
+{
+   //alert(datum);
+    d = new Date(datum);
+    var year = d.getFullYear();
+    var month = d.getMonth()+1;
+    var date = d.getDate();
+    var datum = year+"-"+month+"-"+date; //Kan hända att man får lov att ändra på datumformatet här, för att passa till MySQL
+
+    var data = "date"+datum;
+
+    sendData("container","day.php",data,displayActivity);
+   // alert(datum);
+
+}
+
+
+/* Diverse callbacks - används av Ajax */
+
+function displayActivity(id,response)
+{
+    alert(resonse.responseText);
 }
 
 
