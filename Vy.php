@@ -22,19 +22,25 @@
     $name = $_POST["name"];
     $location = $_POST["location"];
     $description = $_POST["description"];
-    $starttime = $_POST["starttime"];
-    $endtime = $_POST["endtime"];
-    $forCalendarID = $_POST["forCalendarID"];
+    $starttime = str_replace('T',' ', $_POST["starttime"]);
+    $endtime = str_replace('T',' ', $_POST["endtime"]);
+ 
     $response = myCurl::execute_curl("http://10.130.216.144/~theprovider/calendar/php/create-activity.php",
     [
-        "name"=>$name,
-        "location"=>$location,
-        "description"=>$description,
-        "starttime"=>$starttime,
-        "endtime"=>$endtime,
-        "forCalendarID"=>$forCalendarID
+        "activity"=>[
+            "name"=>$name,
+            "location"=>$location,
+            "description"=>$description,
+            "starttime"=>$starttime,
+            "endtime"=>$endtime],
+
+        "token"=>$_SESSION["token"],
+        "accountID"=>$_SESSION["account"]
     ]);
+
     }
+    var_dump ($_POST);
+    var_dump ($response);
 ?>
 
 <html>
@@ -67,6 +73,9 @@
 
 </div>
 
+<div class="skitkill">
+</div>
+
 <div class="addActivities">
 <p class="aktivtext">Lägg till aktivitet</p>
 <img src="add2.png" class="addActivity">
@@ -85,7 +94,6 @@
 <input type="text" name="description" id="activityDesc" placeholder="Beskrivning" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Beskrivning'" autocomplete="off"><br/><br/><br/><br/><p>Start-tid</p>
 <input type="datetime-local" name="starttime" id="stime" placeholder="Start-tid" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Start-tid'" autocomplete="off"><br/><br/><br/><br/><p>slut-tid</p>
 <input type="datetime-local" name="endtime" id="etime" placeholder="Slut-tid" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Slut-tid'" autocomplete="off"><br/>
-<input type="numer" name="forCalendarID" id="blabla">
 
 <input type="submit" value="Skapa" class="Skapa">
 <input type="reset" value="Rensa" class="rensa2">
@@ -95,12 +103,17 @@
 <script>
 $(".addActivities").click(function(){
     $(".createActivity").addClass("show-createActivity");
+    $(".skitkill").addClass("visaaa");
 });
 $(".hide-createActivity").click(function(){
     $(".createActivity").removeClass("show-createActivity");
+    $(".skitkill").removeClass("visaaa");
+});
+$(".skitkill").click(function(){
+    $(".createActivity").removeClass("show-createActivity");
+    $(".skitkill").removeClass("visaaa");
 });
 </script>
-
 
 <div id="logout ">
 <p>Welcome <?php echo $_SESSION['account']; ?>,</br> Din token är <?php echo $_SESSION['token'];?></br> 

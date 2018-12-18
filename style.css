@@ -228,6 +228,17 @@ td
     transition: 0.4s ease-in-out;
     text-align: center;
 }
+.skitkill{
+    width: 70vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+.visaaa{
+    display: block;
+}
 .show-createActivity{
     transform: translateX(70vw);
 }
