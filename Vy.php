@@ -17,22 +17,15 @@
             $_SESSION["account"] = $account["accountID"];
     }
 
-            require_once ("day.php");
-            if(isset($_POST["starttime"])){
-            $starttime = $_POST["starttime"];
-            $response = myCurll::execute_curl("http://10.130.216.144/~theprovider/get-day.php",
+            require_once ("mycurl.php");;
+            $response = myCurl::execute_curl("http://10.130.216.144/~theprovider/get-day.php",
             [
                 "token"=>$_SESSION["token"],
                 "accountID"=>$_SESSION["account"],
-                "starttime"=>$starttime,
+                "date"=>$_REQUEST["date"],
             ]);
 
-            $token = json_decode($response,true);
-            $_SESSION["token"] = $token["token"];
-            $account = json_decode($response,true);
-            $_SESSION["account"] = $account["accountID"];
-
-    } ?>
+?>
 
 <html>
 <head>
