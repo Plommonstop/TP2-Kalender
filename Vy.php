@@ -17,25 +17,21 @@
             $_SESSION["account"] = $account["accountID"];
     }
 
-            require_once ("mycurl.php");
-            if(isset($_POST["name"]) && isset($_POST["startTime"]) && isset($_POST["endTime"])){
-            $name = $_POST["name"];
-            $description = $_POST["description"];
-            $location = $_POST["location"];
-            $startTime = $_POST["startTime"];
-            $endTime = $_POST["endTime"];
-
-            
-            $response = myCurl::execute_curl("http://10.130.216.144/~theprovider/create-activity.php",
+            require_once ("day.php");
+            if(isset($_POST["starttime"])){
+            $starttime = $_POST["starttime"];
+            $response = myCurll::execute_curl("http://10.130.216.144/~theprovider/get-day.php",
             [
                 "token"=>$_SESSION["token"],
                 "accountID"=>$_SESSION["account"],
-                "name"=>$name,
-                "description"=>$description,
-                "location"=>$location,
-                "startTime"=>$startTime,
-                "endTime"=>$endTime,
+                "starttime"=>$starttime,
             ]);
+
+            $token = json_decode($response,true);
+            $_SESSION["token"] = $token["token"];
+            $account = json_decode($response,true);
+            $_SESSION["account"] = $account["accountID"];
+
     } ?>
 
 <html>
@@ -77,11 +73,11 @@
 <form  method="POST" action ="Vy.php">
 
 <input type="text" name="name" id="activityName" placeholder="Namn på aktivitet" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Namn på aktivitet'" autocomplete="off"><br/><br/><br/><br/>
-<input type="text" name="description" id="activityDesc" placeholder="Beskrivning" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Beskrivning'" autocomplete="off"><br/><br/><br/><br/>
-<input type="text" name="location" id="location" placeholder="Plats" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Plats'" autocomplete="off"><br/><br/><br/><br/><p>Start-tid</p>
-<input type="datetime-local" name="startTime" id="stime" placeholder="Start-tid" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Start-tid'" autocomplete="off"><br/><br/><br/><br/><p>slut-tid</p>
-<input type="datetime-local" name="endTime" id="etime" placeholder="Slut-tid" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Slut-tid'" autocomplete="off"><br/>
-
+<input type="text" name="location" id="location" placeholder="Plats" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Plats'" autocomplete="off"><br/><br/><br/><br/>
+<input type="text" name="description" id="activityDesc" placeholder="Beskrivning" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Beskrivning'" autocomplete="off"><br/><br/><br/><br/><p>Start-tid</p>
+<input type="datetime-local" name="starttime" id="stime" placeholder="Start-tid" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Start-tid'" autocomplete="off"><br/><br/><br/><br/><p>slut-tid</p>
+<input type="datetime-local" name="endtime" id="etime" placeholder="Slut-tid" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Slut-tid'" autocomplete="off"><br/>
+<input type="numer" name="forCalendarID" id="blabla">
 
 <input type="submit" value="Skapa" class="Skapa">
 <input type="reset" value="Rensa" class="rensa2">
@@ -104,7 +100,7 @@ $(".hide-createActivity").click(function(){
 </div>
 
 <footer>
-  <p>WAH Calendar</p>
+  <p>WAH Calendarr</p>
 </footer>
 
 </body>
