@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-echo $_REQUEST["date"];
+
 require_once ("mycurl.php");
 $response = myCurl::execute_curl("http://10.130.216.144/~theprovider/calendar/php/get-day.php",
 
@@ -12,5 +12,5 @@ $response = myCurl::execute_curl("http://10.130.216.144/~theprovider/calendar/ph
             ]);
            // var_dump ($result);
             $activity = json_decode($response,true);
-            var_dump ($activity);
+            echo $response;
 ?>
