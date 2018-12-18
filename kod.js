@@ -176,9 +176,9 @@ function displayDatum(datum)
     var date = d.getDate();
     var datum = year+"-"+month+"-"+date; //Kan hända att man får lov att ändra på datumformatet här, för att passa till MySQL
 
-    var data = "date"+datum;
+    var data = "date="+datum;
 
-    sendData("container","getactivites.php",data,displayActivity);
+    sendData("container","getactivities.php",data,displayActivity);
    // alert(datum);
 
 }
@@ -188,7 +188,7 @@ function displayDatum(datum)
 
 function displayActivity(id,response)
 {
-    alert(resonse.responseText);
+    alert(response.responseText);
 }
 
 
