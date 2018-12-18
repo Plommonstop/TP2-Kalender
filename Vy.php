@@ -17,14 +17,6 @@
             $_SESSION["account"] = $account["accountID"];
     }
 
-            require_once ("mycurl.php");;
-            $response = myCurl::execute_curl("http://10.130.216.144/~theprovider/get-day.php",
-            [
-                "token"=>$_SESSION["token"],
-                "accountID"=>$_SESSION["account"],
-                "date"=>$_REQUEST["date"],
-            ]);
-
 ?>
 
 <html>
@@ -35,6 +27,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Varela+Round" rel="stylesheet">
+    <script src="ajaxlib.js"></script>
     <script src="kod.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
@@ -49,6 +42,10 @@
             </div>
             <div id="month">
             </div>
+            
+</div>
+<div id="container">
+<textarea id="aktivitet" rows="4">Tillfällig container för text från servern rörande aktivitet</textarea>
 
 </div>
 
@@ -88,10 +85,9 @@ $(".hide-createActivity").click(function(){
 
 
 <div id="logout ">
-<p>Welcome <?php echo $_SESSION['account']; ?>,
- <a href="logout.php">logout</a></p>
+<p>Welcome <?php echo $_SESSION['account']; ?>,</br> Din token är <?php echo $_SESSION['token'];?></br> 
+ <button type="button"><a href="logout.php">logout</button></a></p>
 </div>
-
 <footer>
   <p>WAH Calendarr</p>
 </footer>
