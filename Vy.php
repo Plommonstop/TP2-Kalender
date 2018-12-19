@@ -45,7 +45,16 @@
             
 </div>
 <div id="container">
-<textarea id="aktivitet" rows="4">Tillfällig container för text från servern rörande aktivitet</textarea>
+<textarea id="aktivitet"  rows="4">Tillfällig container för text från servern rörande aktivitet</textarea>
+<style>
+#aktivitet{
+    background-color:red;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+</style>
 
 </div>
 
