@@ -71,6 +71,42 @@
 
 </div>
 
+<!--
+
+<button style="width:100px;height:50px;" type="button" class="TJA">
+</button>
+
+<script>
+$(".TJA").on('click', function(){
+
+    var request = [];
+    var i;
+
+    for(i=1;i<32;i++) {
+
+        var request[i] = $.ajax({
+            method: "POST",
+            url: "getactivities.php",
+            dataType: "json",
+            data: { date: "2018-12-18" }
+        })
+
+        request[i].done(function( msg ) {
+            console.log(msg);
+            $('#3_1').css('background','green');
+        });
+        
+        request[i].fail(function( jqXHR, textStatus ) {
+            alert( "Request failed: " + textStatus );
+        });
+
+    }
+
+});
+
+
+</script> -->
+
 <div class="skitkill">
 </div>
 
