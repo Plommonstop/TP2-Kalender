@@ -39,8 +39,6 @@
     ]);
 
     }
-    var_dump ($_POST);
-    var_dump ($response);
 ?>
 
 <html>
@@ -69,7 +67,7 @@
             
 </div>
 <div id="container">
-<textarea id="aktivitet" rows="4">Tillfällig container för text från servern rörande aktivitet</textarea>
+<textarea id="aktivitet" rows="4">Aktivitet</textarea>
 
 </div>
 
@@ -115,12 +113,11 @@ $(".skitkill").click(function(){
 });
 </script>
 
-<div id="logout ">
-<p>Welcome <?php echo $_SESSION['account']; ?>,</br> Din token är <?php echo $_SESSION['token'];?></br> 
- <button type="button"><a href="logout.php">logout</button></a></p>
-</div>
+<p class="loog">Welcome <?php echo $_SESSION['account']; ?>,</br> Din token är <?php echo $_SESSION['token'];?></p>
+ <button type="button" class="logout-btn"><a href="logout.php">Logga ut</button></a>
+
 <footer>
-  <p>WAH Calendarr</p>
+  <p>WAH Kalender</p>
 </footer>
 
 </body>

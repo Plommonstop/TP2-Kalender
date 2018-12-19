@@ -13,4 +13,5 @@ $response = myCurl::execute_curl("http://10.130.216.144/~theprovider/calendar/ph
            // var_dump ($result);
             $activity = json_decode($response,true);
             echo $response;
+
 ?>
