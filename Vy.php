@@ -98,7 +98,7 @@ $(".hide-createActivity").click(function(){
  <button type="button"><a href="logout.php">logout</button></a></p>
 </div>
 <footer>
-  <p>WAH Calendarr</p>
+  <p>WAH Calendar</p>
 </footer>
 
 </body>
