@@ -17,6 +17,28 @@
             $_SESSION["account"] = $account["accountID"];
     }
 
+    require_once ("mycurl.php");
+    if(isset($_POST["name"]) && isset($_POST["starttime"])){
+    $name = $_POST["name"];
+    $location = $_POST["location"];
+    $description = $_POST["description"];
+    $starttime = str_replace('T',' ', $_POST["starttime"]);
+    $endtime = str_replace('T',' ', $_POST["endtime"]);
+ 
+    $response = myCurl::execute_curl("http://10.130.216.144/~theprovider/calendar/php/create-activity.php",
+    [
+        "activity"=>[
+            "name"=>$name,
+            "location"=>$location,
+            "description"=>$description,
+            "starttime"=>$starttime,
+            "endtime"=>$endtime],
+
+        "token"=>$_SESSION["token"],
+        "accountID"=>$_SESSION["account"]
+    ]);
+
+    }
 ?>
 
 <html>
@@ -45,17 +67,47 @@
             
 </div>
 <div id="container">
-<textarea id="aktivitet"  rows="4">Tillfällig container för text från servern rörande aktivitet</textarea>
-<style>
-#aktivitet{
-    background-color:red;
-    margin-left:auto;
-    margin-right:auto;
-    margin-top:auto;
-    margin-bottom:auto;
-}
-</style>
+<textarea id="aktivitet" rows="4">Aktivitet</textarea>
 
+</div>
+
+<!--
+
+<button style="width:100px;height:50px;" type="button" class="TJA">
+</button>
+
+<script>
+$(".TJA").on('click', function(){
+
+    var request = [];
+    var i;
+
+    for(i=1;i<32;i++) {
+
+        var request[i] = $.ajax({
+            method: "POST",
+            url: "getactivities.php",
+            dataType: "json",
+            data: { date: "2018-12-18" }
+        })
+
+        request[i].done(function( msg ) {
+            console.log(msg);
+            $('#3_1').css('background','green');
+        });
+        
+        request[i].fail(function( jqXHR, textStatus ) {
+            alert( "Request failed: " + textStatus );
+        });
+
+    }
+
+});
+
+
+</script> -->
+
+<div class="skitkill">
 </div>
 
 <div class="addActivities">
@@ -76,7 +128,6 @@
 <input type="text" name="description" id="activityDesc" placeholder="Beskrivning" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Beskrivning'" autocomplete="off"><br/><br/><br/><br/><p>Start-tid</p>
 <input type="datetime-local" name="starttime" id="stime" placeholder="Start-tid" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Start-tid'" autocomplete="off"><br/><br/><br/><br/><p>slut-tid</p>
 <input type="datetime-local" name="endtime" id="etime" placeholder="Slut-tid" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Slut-tid'" autocomplete="off"><br/>
-<input type="numer" name="forCalendarID" id="blabla">
 
 <input type="submit" value="Skapa" class="Skapa">
 <input type="reset" value="Rensa" class="rensa2">
@@ -86,17 +137,21 @@
 <script>
 $(".addActivities").click(function(){
     $(".createActivity").addClass("show-createActivity");
+    $(".skitkill").addClass("visaaa");
 });
 $(".hide-createActivity").click(function(){
     $(".createActivity").removeClass("show-createActivity");
+    $(".skitkill").removeClass("visaaa");
+});
+$(".skitkill").click(function(){
+    $(".createActivity").removeClass("show-createActivity");
+    $(".skitkill").removeClass("visaaa");
 });
 </script>
 
+<p class="loog">Welcome <?php echo $_SESSION['account']; ?>,</br> Din token är <?php echo $_SESSION['token'];?></p>
+ <button type="button" class="logout-btn"><a href="logout.php">Logga ut</button></a>
 
-<div id="logout ">
-<p>Welcome <?php echo $_SESSION['account']; ?>,</br> Din token är <?php echo $_SESSION['token'];?></br> 
- <button type="button"><a href="logout.php">logout</button></a></p>
-</div>
 <footer>
   <p>WAH Calendar</p>
 </footer>

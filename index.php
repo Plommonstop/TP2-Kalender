@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>Bibliotek</title>
+    <title>WAH Kalender</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
@@ -11,7 +11,7 @@
 
 <body>
 
-<h1>WAH Calendar</h1>
+<h1>WAH Kalenderr</h1>
 
 <form action ="Loggain.php">
 <input type="submit" value="Logga In" class="loggain">
@@ -22,7 +22,7 @@
 </form>
 
 <footer>
-  <p>WAH Calendar</p>
+  <p>WAH Kalender</p>
 </footer>
 
 </body>
