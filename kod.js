@@ -62,14 +62,18 @@ function populateCalendar(year,month)
     {
         for(i=startdag;i<7;i++)
         {
+           
+
             document.getElementById(startvecka+"_"+i).innerHTML=date.getDate();
             document.getElementById(startvecka+"_"+i).setAttribute("datum",date);
             document.getElementById(startvecka+"_"+i).setAttribute("onmousedown","displayDatum('"+date+"');");
             iterator++;
             date.setDate(iterator);
 
-                if(date.getMonth()!= start_month)
-                        return;
+            displaySelected((startvecka)+"_"+(i+1),date);
+
+            if(date.getMonth()!= start_month)
+                return;
         }
         startdag=0;
         startvecka++;
@@ -164,6 +168,39 @@ function correctWeekDays(day)
 
             return days[day];
 }
+/*
+Displayar i kalendern att något fnns för aktuellt datum
+*/
+
+function displaySelected(id,datum)
+{
+   //alert(datum);
+    d = new Date(datum);
+    var year = d.getFullYear();
+    var month = d.getMonth()+1;
+    var date = d.getDate();
+    var datum = year+"-"+month+"-"+date; //Kan hända att man får lov att ändra på datumformatet här, för att passa till MySQL
+
+    var data = "date="+datum;
+
+   // alert(datum);
+
+    sendData(id,"getactivities.php",data,mark);
+   // alert(datum);
+
+}
+
+function mark(id,response)
+{
+    var jsonObj = JSON.parse(response.responseText);
+  //alert(jsonObj.activities.length);
+    if(jsonObj.activities.length == 0)
+    document.getElementById(id).setAttribute("class","ummarked");
+    else
+    document.getElementById(id).setAttribute("class","marked");
+
+}
+
 
 /* Ajaxanrop*/
 
@@ -182,6 +219,8 @@ function displayDatum(datum)
    // alert(datum);
 
 }
+
+
 
 
 /* Diverse callbacks - används av Ajax */
