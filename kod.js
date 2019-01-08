@@ -78,10 +78,6 @@ function populateCalendar(year,month)
             
 }
 
-
-
-
-
 function changeVy(year)
 {
     var monthlist = document.getElementById("selected_month");
@@ -214,5 +210,3 @@ function displayActivity(id,response)
     
     document.getElementById(id).value = content;
 }
-
-
