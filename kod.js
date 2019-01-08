@@ -1,5 +1,5 @@
 
-
+// Här görs alla dagar och kolumn så att de stämmer med dagar.
 function createTable()
 {
     var table = document.createElement("table");
@@ -150,7 +150,7 @@ function createLists()
 
 }
 
-
+// fixa dagar så att de sitter rätt i kolumn annars kommer det vara fel dag och datum.
 function correctWeekDays(day)
 {
     days=new Array();
