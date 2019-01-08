@@ -189,7 +189,6 @@ function displaySelected(id,datum)
 function mark(id,response)
 {
     var jsonObj = JSON.parse(response.responseText);
-  //alert(jsonObj.activities.length);
     if(jsonObj.activities.length == 0)
     document.getElementById(id).setAttribute("class","ummarked");
     else
