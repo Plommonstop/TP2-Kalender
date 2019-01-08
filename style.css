@@ -327,15 +327,15 @@ border-bottom-width: 0.2vh;
     position: absolute;
     top: 13.5vh;
     left: 1vw;
-    width: 15vw;
+    width: 13vw;
     font-size: 1.5vw;
 }
 #selected_month{
     height: 4vh;
     position: absolute;
     top: 13.5vh;
-    left: 17vw;
-    width: 15vw;
+    left: 15vw;
+    width: 13vw;
     font-size: 1.5vw;
 }
 #aktivitet{
