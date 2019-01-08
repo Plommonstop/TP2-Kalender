@@ -219,6 +219,9 @@ td
     height:12.5vh;
     background-color:rgb(255,255,255);
 }
+td:hover{
+    cursor: pointer;
+}
 .addActivity{
     float: right;
     width: 2.5vw;
@@ -356,6 +359,9 @@ border-bottom-width: 0.2vh;
     margin-top:3vh;
     width: 40vw;
     height: 12vh;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1vw;
+    font-weight: 500;
     }
 .logout-btn{
 background-color: white; 

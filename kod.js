@@ -242,7 +242,7 @@ function displayActivity(id,response)
                                  var slut = jsonObj.activities[i].endtime;
 
                                 
-                                 content+=start+"-"+slut+"\nbeskrivning: " + description+"\n namn:"+name;
+                                 content+="Namn: "+name+"\nbeskrivning: "+description+"\nStarttid: "+start+"\nSluttid: "+slut+"\n\n";
                                 
 
     }
