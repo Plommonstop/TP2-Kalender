@@ -237,7 +237,7 @@ select{
 td
 {
     height:14vh;
-    background-color:rgb(255,255,255);
+    background-color:rgb(250,250,250);
     border: 0.5px solid rgb(220, 220, 220);
     font-size: 1.6em;
 }
@@ -350,7 +350,7 @@ border-bottom-width: 0.2vh;
 }
 .marked
 {
-    background-color:rgb(236, 236, 236);
+    background-color:rgb(235, 235, 235);
     cursor: pointer;
 }
 .marked:hover{
