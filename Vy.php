@@ -39,7 +39,7 @@
     ]);
 
     }
-?>
+?>  
 
 <html>
 <head>
@@ -111,8 +111,8 @@ $(".TJA").on('click', function(){
 </div>
 
 <div class="addActivities">
-<p class="aktivtext">Lägg till aktivitet</p>
-<img src="add2.png" class="addActivity">
+<p class="aktivtext">Skapa aktivitet</p>
+<img src="add.png" class="addActivity">
 </div>
 
 <div class="createActivity">

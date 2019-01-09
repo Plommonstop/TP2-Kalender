@@ -3,7 +3,7 @@
 function createTable()
 {
     var table = document.createElement("table");
-    table.setAttribute("border","1");
+    table.setAttribute("cellspacing","0");
     var row = document.createElement("tr");
     var days = "Mån,Tis,Ons,Tor,Fre,Lör,Sön".split(",");
     for(i=0;i<days.length;i++)
@@ -249,3 +249,6 @@ function displayActivity(id,response)
     
     document.getElementById(id).value = content;
 }
+
+
+
