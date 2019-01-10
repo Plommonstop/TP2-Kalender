@@ -232,16 +232,16 @@ function displayActivity(id,response)
     {
         
 
-                                 var postid = jsonObj.activities[i].activityID;
+    var postid = jsonObj.activities[i].activityID;
 
-                                 var name = jsonObj.activities[i].name;
+    var name = jsonObj.activities[i].name;
 
-                                 var description = jsonObj.activities[i].description;
-                                 var start = jsonObj.activities[i].starttime;
-                                 var slut = jsonObj.activities[i].endtime;
+    var description = jsonObj.activities[i].description;
+    var start = jsonObj.activities[i].starttime;
+    var slut = jsonObj.activities[i].endtime;
 
                                 
-                                 content+=start+"-"+slut+"\nbeskrivning: " + description+"\n namn:"+name;
+    content+=start+"-"+slut+"\nbeskrivning: " + description+"\n namn:"+name;
                                 
 
     }
