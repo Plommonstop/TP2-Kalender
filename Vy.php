@@ -67,7 +67,7 @@
             
 </div>
 <div id="container">
-<textarea id="aktivitet" rows="4">Här visas dina aktivitet</textarea>
+<textarea id="aktivitet" rows="4">Aktivitet</textarea>
 
 </div>
 
