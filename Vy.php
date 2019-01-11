@@ -39,7 +39,7 @@
     ]);
 
     }
-?>
+?>  
 
 <html>
 <head>
@@ -47,7 +47,7 @@
     <title>WAH Kalender</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Varela+Round" rel="stylesheet">
     <script src="ajaxlib.js"></script>
     <script src="kod.js"></script>
@@ -67,7 +67,7 @@
             
 </div>
 <div id="container">
-<textarea id="aktivitet" rows="4">Här visas dina aktivitet</textarea>
+<textarea id="aktivitet" rows="4">Här visas dina aktiviteter</textarea>
 
 </div>
 
@@ -111,8 +111,8 @@ $(".TJA").on('click', function(){
 </div>
 
 <div class="addActivities">
-<p class="aktivtext">Lägg till aktivitet</p>
-<img src="add2.png" class="addActivity">
+<p class="aktivtext">Skapa aktivitet</p>
+<img src="add.png" class="addActivity">
 </div>
 
 <div class="createActivity">
@@ -129,8 +129,8 @@ $(".TJA").on('click', function(){
 <input type="datetime-local" name="starttime" id="stime" placeholder="Start-tid" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Start-tid'" autocomplete="off"><br/><br/><br/><br/><p>slut-tid</p>
 <input type="datetime-local" name="endtime" id="etime" placeholder="Slut-tid" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Slut-tid'" autocomplete="off"><br/>
 
-<input type="submit" value="Skapa" class="Skapa">
 <input type="reset" value="Rensa" class="rensa2">
+<input type="submit" value="Skapa" class="Skapa">
 </form>
 </div>
 

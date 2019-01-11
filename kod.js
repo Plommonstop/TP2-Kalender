@@ -3,7 +3,7 @@
 function createTable()
 {
     var table = document.createElement("table");
-    table.setAttribute("border","1");
+    table.setAttribute("cellspacing","0");
     var row = document.createElement("tr");
     var days = "Mån,Tis,Ons,Tor,Fre,Lör,Sön".split(",");
     for(i=0;i<days.length;i++)
@@ -241,10 +241,13 @@ function displayActivity(id,response)
     var slut = jsonObj.activities[i].endtime;
 
                                 
-    content+=start+"-"+slut+"\nbeskrivning: " + description+"\n namn:"+name;
+             content+="Namn: "+name+"\nbeskrivning: "+description+"\nStarttid: "+start+"\nSluttid: "+slut+"\n\n";
                                 
 
     }
     
     document.getElementById(id).value = content;
 }
+
+
+
