@@ -11,7 +11,7 @@
 
 <body>
 
-<h1>WAH Kalenderr</h1>
+<h1>WAH Kalender</h1>
 
 <form action ="Loggain.php">
 <input type="submit" value="Logga In" class="loggain">
