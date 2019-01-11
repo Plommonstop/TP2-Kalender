@@ -129,8 +129,8 @@ $(".TJA").on('click', function(){
 <input type="datetime-local" name="starttime" id="stime" placeholder="Start-tid" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Start-tid'" autocomplete="off"><br/><br/><br/><br/><p>slut-tid</p>
 <input type="datetime-local" name="endtime" id="etime" placeholder="Slut-tid" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Slut-tid'" autocomplete="off"><br/>
 
-<input type="submit" value="Skapa" class="Skapa">
 <input type="reset" value="Rensa" class="rensa2">
+<input type="submit" value="Skapa" class="Skapa">
 </form>
 </div>
 
