@@ -4,7 +4,7 @@
     
     session_start();
     require_once ("mycurl.php");
-    if(isset($_POST["username"]) && isset($_POST["password"])){
+    if(isset($_POST["accountID"]) && isset($_POST["password"])){
     $username = $_POST["username"];
     $password = $_POST["password"];
     $response = myCurl::execute_curl("http://10.130.216.144/~theprovider/generate-token.php",

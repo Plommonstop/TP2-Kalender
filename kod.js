@@ -1,5 +1,5 @@
 
-
+// Här görs alla dagar och kolumn så att de stämmer med dagar.
 function createTable()
 {
     var table = document.createElement("table");
@@ -150,7 +150,7 @@ function createLists()
 
 }
 
-
+// fixa dagar så att de sitter rätt i kolumn annars kommer det vara fel dag och datum.
 function correctWeekDays(day)
 {
     days=new Array();
@@ -189,7 +189,6 @@ function displaySelected(id,datum)
 function mark(id,response)
 {
     var jsonObj = JSON.parse(response.responseText);
-  //alert(jsonObj.activities.length);
     if(jsonObj.activities.length == 0)
     document.getElementById(id).setAttribute("class","ummarked");
     else
@@ -233,16 +232,16 @@ function displayActivity(id,response)
     {
         
 
-                                 var postid = jsonObj.activities[i].activityID;
+    var postid = jsonObj.activities[i].activityID;
 
-                                 var name = jsonObj.activities[i].name;
+    var name = jsonObj.activities[i].name;
 
-                                 var description = jsonObj.activities[i].description;
-                                 var start = jsonObj.activities[i].starttime;
-                                 var slut = jsonObj.activities[i].endtime;
+    var description = jsonObj.activities[i].description;
+    var start = jsonObj.activities[i].starttime;
+    var slut = jsonObj.activities[i].endtime;
 
                                 
-                                 content+="Namn: "+name+"\nbeskrivning: "+description+"\nStarttid: "+start+"\nSluttid: "+slut+"\n\n";
+             content+="Namn: "+name+"\nbeskrivning: "+description+"\nStarttid: "+start+"\nSluttid: "+slut+"\n\n";
                                 
 
     }
