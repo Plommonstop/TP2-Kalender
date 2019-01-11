@@ -314,14 +314,14 @@ border-bottom-width: 0.2vh;
     width: 8vw;
     font-size: 1.5vw;
     padding: 0.6vw 0vw;
-    text-align: left;
+    text-align: right;
     background-color: rgb(236, 236, 236);
 }
 .rensa2{
     width: 8vw;
     font-size: 1.5vw;
     padding: 0.6vw 0vw;
-    text-align: right;
+    text-align: left;
     background-color: rgb(236, 236, 236);
 }
 .createActivity p{
